@@ -1,0 +1,193 @@
+body {
+	font: 16px/1.4em 'PT Sans', sans-serif;
+    color: #1c1c1c;
+    
+}
+a {
+	color: #69C;
+	text-decoration: none;
+}
+a:hover {
+	color: #F60;
+}
+h1 {
+	font: 1.7em;
+	line-height: 110%;
+	color: #000;
+}
+h1, h2, h3 {
+	color: #000;
+}
+h3 {
+	border-top: solid 1px #eee;
+	padding: 20px 0;
+	margin: 20px 0 0;
+	font-size: 150%;
+}
+p {
+	margin: 0 0 20px;
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+#pagewrap {
+	max-width: 96%;
+	margin: 0 auto;
+}
+.wrapper {
+	overflow: hidden;
+}
+.side {
+    float: right;
+    width: 22.5%;
+    visibility: hidden;
+}
+
+/************************************************************************************
+COLUMN
+*************************************************************************************/
+.col {
+	background: #eee;
+	float: left;
+	margin-left: 3.2%;
+	margin-bottom: 30px;
+}
+.fullwidth .col {
+	float: none;
+	margin-left: 0;
+}
+/* grid4 col */
+.grid4 .col {
+	width: 22.6%;
+}
+/* grid3 col */
+.grid3 .col {
+	width: 31.2%;
+}
+/* grid2 col */
+.grid2 .col {
+	width: 48.4%;
+}
+/* clear col */
+.grid4 .col:nth-of-type(4n+1),
+.grid3 .col:nth-of-type(3n+1),
+.grid2 .col:nth-of-type(2n+1) {
+	margin-left: 0;
+	clear: left;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+@media screen and (min-width: 1024px) {
+	/* grid4 */
+	#pagewrap {
+	    width:960px;
+	}
+}
+
+/* reset cols to 3-column */
+@media screen and (max-width: 1024px) {
+	/* grid4 */
+	.grid4 .col {
+		width: 31.2%;
+	}
+	.grid4 .col:nth-of-type(4n+1) {
+		margin-left: 3.2%;
+		clear: none;
+	}
+	.grid4 .col:nth-of-type(3n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+/* reset cols to 2-column */
+@media screen and (max-width: 768px) {
+	/* grid4 */
+	.grid4 .col {
+		width: 48.4%;
+	}
+	.grid4 .col:nth-of-type(3n+1) {
+		margin-left: 3.2%;
+		clear: none;
+	}
+	.grid4 .col:nth-of-type(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+
+	/* grid3 */
+	.grid3 .col {
+		width: 48.4%;
+	}
+	.grid3 .col:nth-of-type(3n+1) {
+		margin-left: 3.2%;
+		clear: none;
+	}
+	.grid3 .col:nth-of-type(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+/* reset cols to fullwidth */
+@media screen and (max-width: 480px) {
+	/* grid4 */
+	.col {
+		width: 100% !important;
+		margin-left: 0 !important;
+		clear: none !important;
+	}
+}
+
+/* ======================================
+ 
+    MediaQuery-Reporter Styles
+ 
+========================================= */
+ 
+body:after {
+    content: "less than 320px";
+    font-size: 300%;
+    font-weight: bold;
+    position: fixed;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: #a32b29;
+    background-color: hsla(1,60%,40%,0.7);
+    color: #fff;
+}
+
+@media only screen and (min-width: 320px) {
+    body:after {
+        content: "320 to 480px";
+        background-color: #66a329;
+        background-color: hsla(90,60%,40%,0.7);
+    }
+}
+@media only screen and (min-width: 480px) {
+    body:after {
+        content: "480 to 768px";
+        background-color: #29a3a3;
+        background-color: hsla(180,60%,40%,0.7);
+    }
+}
+@media only screen and (min-width: 768px) {
+    body:after {
+        content: "768 to 1024px";
+        background-color: #6629a3;
+        background-color: hsla(270,60%,40%,0.7);
+    }
+}
+@media only screen and (min-width: 1024px) {
+    body:after {
+        content: "1024 and up";
+        background-color: #a32929;
+        background-color: hsla(360,60%,40%,0.7);
+    }
+}

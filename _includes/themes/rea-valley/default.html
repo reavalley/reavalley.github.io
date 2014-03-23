@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>{{ page.title }}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>	
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+	<meta name="keywords" content="" />
+
+	<!-- Optimized mobile viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Place favicon.ico and apple-touch-icon.png in root directory -->
+		
+	<link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<div class="g1">
+			<h1>Fluid Baseline Grid</h1>
+		</div>
+		<div class="g2">
+			<h5>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.</h5>
+		</div>
+		<div class="g2">
+			<p>Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
+		</div>
+	</header>
+	<div class="cf"></div>
+	<div id="content">
+        {{ content }}		
+	</div>
+	<footer class="g3 cf">
+		<small>&copy; {{ site.author.name }} 2014</small>
+	</footer>
+
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<!-- Minimized jQuery from Google CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+	<!-- HTML5 IE Enabling Script -->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- CSS3 Media Queries -->
+	<script src="{{ ASSET_PATH }}/js/respond.min.js"></script>
+
+	{% include JB/analytics %}
+</body>
+</html>
